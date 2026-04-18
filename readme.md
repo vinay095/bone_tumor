@@ -44,4 +44,4 @@ Validation was performed on a strictly separated holdout set of 373 X-ray images
 * `visualizations/` - Scripts for generating feature correlation matrices and scatter plots comparing GLCM texture against AI Fusion scores.
 
 ### Future Work (Phase 4)
-The next iteration of this project will utilize the generated `tumor_features_final_200e.csv` to train a downstream Random Forest classifier. To bypass the lack of open-source Giant Cell Tumor (GCT) radiographic data, the classifier will be trained to distinguish between open-source **Osteosarcoma** datasets and healthy bone, mathematically validating the diagnostic power of the extracted radiomic and deep features.
+The next iteration of this project will utilize the generated `tumor_features_final_200e.csv` to train a downstream Random Forest classifier. 
