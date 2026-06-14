@@ -1,7 +1,16 @@
 # Multimodal Bone Tumor Diagnosis Using Radiomics and Deep Features
 
-### Overview
-This repository contains an automated Artificial Intelligence pipeline designed to localize bone tumors in X-ray radiographs and extract complex, multimodal mathematical representations for downstream classification. The architecture combines state-of-the-art instance segmentation (YOLOv8-seg) with a hybrid feature extraction engine that fuses physical bone texture analysis (Radiomics) with abstract deep learning patterns.
+## Overview
+
+This repository presents an end-to-end multimodal pipeline for bone tumor analysis in X-ray radiographs.
+
+The system combines:
+- A YOLOv8-seg-based automated lesion localization module
+- A radiomics feature extraction engine (GLCM + LBP)
+- A deep feature extractor (EfficientNet-B0)
+- A fused feature representation for downstream classification tasks
+
+The primary contribution of this work is the construction of a structured multimodal feature dataset derived from automatically localized regions of interest.
 
 ### Project Architecture
 The pipeline is divided into three core phases:
@@ -10,6 +19,7 @@ The pipeline is divided into three core phases:
 * **Dataset:** BTXRD (Bone Tumor X-Ray Dataset). Custom scripts were developed to normalize LabelMe JSON polygon/rectangle annotations into standard YOLO segmentation formats.
 * **Training:** Trained the model for 200 epochs using dual T4 GPUs. 
 * **Performance:** Achieved real-time inference speeds (3.5ms per image), generating a lightweight, deployment-ready `best.pt` weights file (23.9MB).
+  ( Despite moderate detection performance, the model provides sufficient ROI proposals to support feature-based analysis in the downstream pipeline. )
 
 **2. Multimodal Feature Extraction**
 For every detected lesion, the pipeline automatically crops the Region of Interest (ROI) and extracts the following features:
