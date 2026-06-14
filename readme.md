@@ -43,8 +43,8 @@ Validation was performed on a strictly separated holdout set of 373 X-ray images
 <td align="center"><b>YOLOv8 Prediction</b></td>
 </tr>
 <tr>
-<td><img src="results/val_batch1_labels.jpg" width="450"></td>
-<td><img src="results/val_batch1_pred.jpg" width="450"></td>
+<td><img src="val_batch1_labels.jpg" width="450"></td>
+<td><img src="val_batch1_pred.jpg" width="450"></td>
 </tr>
 </table>
 
@@ -53,7 +53,7 @@ Validation was performed on a strictly separated holdout set of 373 X-ray images
 ## Confusion Matrix
 
 <p align="center">
-  <img src="results/confusion_matrix.png" width="700">
+  <img src="confusion_matrix.png" width="700">
 </p>
 
 ---
@@ -61,7 +61,7 @@ Validation was performed on a strictly separated holdout set of 373 X-ray images
 ## Feature Correlation Analysis
 
 <p align="center">
-  <img src="results/Feature_Correlation_Matrix.png" width="700">
+  <img src="Feature_Correlation_Matrix.png" width="700">
 </p>
 
 ---
