@@ -23,17 +23,46 @@ For every detected lesion, the pipeline automatically crops the Region of Intere
 
 ---
 
-### Current Model Metrics (Epoch 200)
+### Model Metrics (Epoch 200)
 Validation was performed on a strictly separated holdout set of 373 X-ray images containing 926 instances.
 
-| Metric | Score | Note |
-| :--- | :--- | :--- |
-| **Precision (Box P)** | 0.645 | Correctly identifies a tumor 64.5% of the time upon detection. |
-| **Recall (Box R)** | 0.326 | Successfully localizes 32.6% of all hidden ground-truth lesions. |
-| **mAP50 (Box)** | 0.349 | Mean Average Precision at 0.50 IoU threshold. |
-| **Inference Speed** | 3.5ms | Highly optimized for potential real-time clinical deployment. |
+| Metric | Score |
+|---------|---------|
+| Precision | 0.645 |
+| Recall | 0.326 |
+| mAP50 | 0.349 |
+| Inference Speed | 3.5 ms |
 
-*Note: The primary objective of this YOLO run was to establish an automated bounding-box pipeline to feed the feature extractor. The SOTA extraction engine successfully processed the validation set based on these localizations.*
+---
+
+## Ground Truth vs Prediction
+
+<table>
+<tr>
+<td align="center"><b>Ground Truth</b></td>
+<td align="center"><b>YOLOv8 Prediction</b></td>
+</tr>
+<tr>
+<td><img src="results/val_batch1_labels.jpg" width="450"></td>
+<td><img src="results/val_batch1_pred.jpg" width="450"></td>
+</tr>
+</table>
+
+---
+
+## Confusion Matrix
+
+<p align="center">
+  <img src="results/confusion_matrix.png" width="700">
+</p>
+
+---
+
+## Feature Correlation Analysis
+
+<p align="center">
+  <img src="results/Feature_Correlation_Matrix.png" width="700">
+</p>
 
 ---
 
